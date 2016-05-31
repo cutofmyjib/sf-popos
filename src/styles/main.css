@@ -1,0 +1,18 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 30px;
+}
+.popo-container {
+  border: 2px solid lightseagreen;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.popo {
+  border: 2px solid lightsalmon;
+  width: 200px;
+  height: 350px;
+  margin: 15px;
+}
