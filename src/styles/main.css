@@ -11,8 +11,27 @@ body {
 }
 
 .popo {
+  box-sizing: border-box;
   border: 2px solid lightsalmon;
   width: 200px;
   height: 350px;
   margin: 15px;
+}
+
+.popo-img {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+}
+
+.popo-subcontainer {
+  box-sizing: border-box;
+  /*width: 100%;*/
+  /*height: 250px;*/
+  padding: 30px;
+  background: red;
+}
+
+.popo-subcontainer h3 {
+  margin: 0;
 }
