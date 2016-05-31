@@ -13,9 +13,7 @@ export default class App extends Component {
             <h1>SF Privately Owned Public Open Spaces</h1>
           </div>
         </div>
-        <div className="popo-container">
-          {children}
-        </div>
+        {children}
         <Footer />
       </div>
     );
