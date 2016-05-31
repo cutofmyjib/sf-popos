@@ -41,7 +41,7 @@ export default class Popos extends Component {
     });
 
     return (
-      <div>
+      <div className="popo-container">
         {list}
       </div>
     );
