@@ -7,7 +7,10 @@ export default class Popo extends Component {
   render() {
     return (
       <div className="popo">
-        <h3>Test</h3>
+        <img className="popo-img" src={this.props.url[0]} />
+        <div className="popo-subcontainer">
+          <h3>{this.props.name}</h3>
+        </div>
       </div>
     );
   }
