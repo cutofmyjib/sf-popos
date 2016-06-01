@@ -10,7 +10,7 @@ export default class App extends Component {
       <div className="main-app-container">
         <div className="main-app-nav">
           <div id="main-app-title">
-            <h1>SF Privately Owned Public Open Spaces</h1>
+            <h1 className="heading-title">SF Privately Owned Public Open Spaces</h1>
           </div>
         </div>
         {children}
