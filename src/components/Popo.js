@@ -6,12 +6,14 @@ export default class Popo extends Component {
   }
   render() {
     return (
-      <div className="popo">
-        <img className="popo-img" src={this.props.url[0]} />
+      <li className="popo">
+        <a href="#"><img className="popo-img" src={this.props.url[0]} /></a>
         <div className="popo-subcontainer">
-          <h3>{this.props.name}</h3>
+          <h2><a href="#">{this.props.name}</a></h2>
+          <p>{this.props.location}</p>
+          <p>{this.props.description}</p>
         </div>
-      </div>
+      </li>
     );
   }
 };
