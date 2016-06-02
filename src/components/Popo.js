@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Popo extends Component {
   componentDidMount() {
     //ajax
   }
   render() {
+    var desc2 = this.props.description
+    if(desc2) {
+      desc2 = desc2.slice(0, 50) + '...'
+    }
     return (
       <li className="popo">
-        <a href="#"><img className="popo-img" src={this.props.url[0]} /></a>
+        <Link to={'popos/' + this.props.id}><img className="popo-img" src={this.props.url[0]} /></Link>
         <div className="popo-subcontainer">
-          <h2><a href="#">{this.props.name}</a></h2>
-          <p>{this.props.location}</p>
-          <p>{this.props.description}</p>
+          <h2><Link to={'popos/' + this.props.id}>{this.props.name}</Link></h2>
+          <div className="location">
+            <i className="material-icons">location_on</i>
+            <p>{this.props.location}</p>
+          </div>
+          <p>{desc2}</p>
         </div>
       </li>
     );
