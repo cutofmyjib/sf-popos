@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import Popo from './Popo';
 import firebase from 'firebase';
 
@@ -39,9 +40,12 @@ export default class Popos extends Component {
     });
 
     return (
-      <ul className="popo-container">
-        {list}
-      </ul>
+      <div>
+        <Header/>
+        <ul className="popo-container">
+          {list}
+        </ul>
+      </div>
     );
   }
 };

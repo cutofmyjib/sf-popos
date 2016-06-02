@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import App from '../containers/App';
-import { NotFoundView, Popos, PopoView, FooView, BarView } from '../components';
+import { NotFoundView, Popos, PopoView, FooView, Header } from '../components';
 import { browserHistory } from 'react-router';
 
 export default () =>
@@ -14,7 +14,6 @@ export default () =>
       <IndexRoute component={Popos}/>
       <Route path="popos/:popoId" component={PopoView}/>
       <Route path="foo" component={FooView}/>
-      <Route path="bar" component={BarView}/>
       <Route path="*" component={NotFoundView} />
     </Route>
   </Router>;
