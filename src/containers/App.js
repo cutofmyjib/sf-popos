@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import Footer from '../components/Footer';
 
 export default class App extends Component {
@@ -8,10 +7,10 @@ export default class App extends Component {
     const { children } = this.props;
     return (
       <div className="main-app-container">
-        <div className="main-app-nav">
-          <div id="main-app-title">
-            <h1 className="heading-title">SF Privately Owned Public Open Spaces</h1>
-          </div>
+        <div className="header-div">
+          <span className="header-sub">SAN FRANCISCO</span>
+          <h1 className="header-title">Privately Owned Public Open Spaces</h1>
+          <p>POPOS are private rooftop gardens, plazas and seating areas that are private property but are mandated for public use.</p>
         </div>
         {children}
         <Footer />
