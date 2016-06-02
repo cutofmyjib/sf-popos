@@ -7,14 +7,11 @@ body {
 .popo-container {
   border: 2px solid SlateBlue;
   display: flex;
-  /*flex-direction: column;*/
   flex-wrap: wrap;
   padding: 20px;
-  /*justify-content: flex-start;*/
+  justify-content: center;
   align-items: flex-start;
-  /*height: 100vh;*/
   margin: 0;
-
 }
 
 .header-div {
@@ -90,7 +87,9 @@ body {
   margin: 0;
 }
 
-.location {
+
+
+.popo-detail-div {
   display: flex;
   align-items: center;
 }
