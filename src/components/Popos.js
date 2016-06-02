@@ -23,10 +23,8 @@ export default class Popos extends Component {
     //subscribe to firebase - database
     //get the data and save it to photos in state
     //bind this to function
-    console.log('did mount')
     firebase.database().ref().on('value', function(snapshot) {
       this.setState({photos: snapshot.val()})
-      console.log(snapshot.val())
     }.bind(this));
   }
 
@@ -37,7 +35,7 @@ export default class Popos extends Component {
 
   render() {
     var list = this.state.photos.map(function(popo, index) {
-      return <Popo key={index} {...popo}/>
+      return <Popo key={index} id={index} {...popo}/>
     });
 
     return (
