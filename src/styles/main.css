@@ -101,7 +101,7 @@ body {
 }
 
 .side-content-subdiv {
-  margin-right: 15px;
+  margin: 15px;
 }
 
 .main-content {
@@ -109,24 +109,27 @@ body {
 }
 
 .main-content-subdiv {
-/*  width: 100%;
-  height: 100%;*/
-  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-subdiv > div {
+  margin: 15px;
+  display: inline-block;
 }
 
 .content-img {
-  width: 100%;
   height: 100%;
   border: 2px solid SlateBlue;
   display: block;
   box-sizing: border-box;
 }
 
+
 .main-content-description {
   padding: 30px;
   border: 2px solid SlateBlue;
   background: white;
-  width: 100%;
   box-sizing: border-box;
 }
 
