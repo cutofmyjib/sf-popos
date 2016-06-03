@@ -55,6 +55,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  box-sizing: border-box;
 }
 
 .popo > a {
@@ -87,9 +88,50 @@ body {
   margin: 0;
 }
 
-
-
 .popo-detail-div {
   display: flex;
   align-items: center;
+}
+
+/*---------------------------------------------------------
+          PopoView
+---------------------------------------------------------*/
+.side-content {
+  width: 40%;
+}
+
+.side-content-subdiv {
+  margin-right: 15px;
+}
+
+.main-content {
+  width: 60%;
+}
+
+.main-content-subdiv {
+/*  width: 100%;
+  height: 100%;*/
+  margin-left: 15px;
+}
+
+.content-img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid SlateBlue;
+  display: block;
+  box-sizing: border-box;
+}
+
+.main-content-description {
+  padding: 30px;
+  border: 2px solid SlateBlue;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-content-description p {
+  color: SlateBlue;
+  margin: 0;
+  line-height: 1.5em;
 }
