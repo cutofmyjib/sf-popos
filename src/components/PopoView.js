@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PopoImg from './PopoImg';
+import Map from './Map';
 import firebase from 'firebase';
 
 var config2 = {
@@ -54,6 +55,7 @@ export default class PopoView extends Component {
               <div className="content-img">
                 <img className="popo-img" src={firstImg}/>
               </div>
+              <Map />
             </div>
           </aside>
           <div className="main-content">
