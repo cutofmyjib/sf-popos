@@ -5,6 +5,7 @@ export default class PopoViewHeader extends Component {
     return (
         <div className="header-div">
           <h1 className="header-title">{this.props.name}</h1>
+          <p>{this.props.location}</p>
         </div>
     )
   }
