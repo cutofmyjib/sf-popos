@@ -125,7 +125,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .main-content-description {
   padding: 30px;
   border: 2px solid SlateBlue;
@@ -137,4 +136,12 @@ body {
   color: SlateBlue;
   margin: 0;
   line-height: 1.5em;
+}
+
+/*---------------------------------------------------------
+          Map
+---------------------------------------------------------*/
+#map {
+  width: 100%;
+  height: 300px;
 }
