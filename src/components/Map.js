@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
+import Loading from './Loading';
 
 export default class Map extends Component {
-  initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: "loading"
+    };
+  }
 
+  initMap() {
+    var myLatLng = {lat: this.props.lat, lng: this.props.long};
     // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: myLatLng,
       scrollwheel: false,
-      zoom: 12
+      zoom: 16
     });
 
     // Create a marker and set its position.
@@ -21,13 +28,14 @@ export default class Map extends Component {
 
   componentDidMount() {
     this.initMap()
+    this.setState({ status: "success" })
   }
+
   render() {
     console.log('MAP')
-    console.log(this.props.params)
-
+    console.log(this.props.lat, this.props.long)
     return (
       <div id="map"></div>
     );
-  }
+  };
 }
