@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import PopoImg from './PopoImg';
+import Loading from './Loading';
+import Map from './Map';
 
 export default class PopoViewContent extends Component {
   render() {
-    var firstImg = data.url.shift()
-    var imgList = data.url.map(function(url) {
+    var firstImg = this.props.data.url.shift()
+    var imgList = this.props.data.url.map(function(url) {
       return <PopoImg url={url}/>
     })
 
@@ -14,9 +17,11 @@ export default class PopoViewContent extends Component {
             <div className="content-img">
               <img className="popo-img" src={firstImg}/>
             </div>
-            <Map  lat={this.props.data.lat}
-                  long={this.props.data.long}
-            />
+            <div className="map-container">
+              <Map  lat={this.props.data.lat}
+                    long={this.props.data.long}
+              />
+            </div>
           </div>
         </aside>
         <div className="main-content">
