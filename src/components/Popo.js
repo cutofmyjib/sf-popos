@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 export default class Popo extends Component {
-  componentDidMount() {
-    //ajax
-  }
   render() {
     var desc2 = this.props.description
     if(desc2) {
