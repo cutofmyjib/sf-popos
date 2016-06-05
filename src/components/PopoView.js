@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import PopoImg from './PopoImg';
-import Loading from './Loading';
 import PopoViewHeader from './PopoView-Header';
 import PopoViewContent from './PopoView-Content';
-import Map from './Map';
 import firebase from 'firebase';
 
 var config2 = {
@@ -19,7 +16,6 @@ export default class PopoView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
       status: 'loading'
     };
   }
@@ -48,7 +44,8 @@ export default class PopoView extends Component {
 
     return (
       <div>
-        <PopoViewHeader name={this.state.data.name}/>
+        <PopoViewHeader name={this.state.data.name}
+                        location={this.state.data.location} />
         <PopoViewContent data={this.state.data}/>
       </div>
     );
