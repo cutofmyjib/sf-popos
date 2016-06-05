@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PopoImg from './PopoImg';
+import Loading from './Loading';
+import PopoViewHeader from './PopoView-Header';
 import Map from './Map';
 import firebase from 'firebase';
 
@@ -16,7 +18,8 @@ export default class PopoView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      status: 'loading'
     };
   }
 
@@ -25,7 +28,7 @@ export default class PopoView extends Component {
     //get the data and save it to photos in state
     //bind this to function
     firebase.database().ref(this.props.params.popoId).on('value', function(snapshot) {
-      this.setState({data: snapshot.val()})
+      this.setState({data: snapshot.val(), status: 'success'})
     }.bind(this));
   }
 
@@ -35,27 +38,29 @@ export default class PopoView extends Component {
   }
 
   render() {
-    var imgList = this.state.data.url;
+    var data = this.state.data;
 
-    if (imgList) {
-      var firstImg = imgList.shift()
-      imgList = this.state.data.url.map(function(url) {
-        return <PopoImg url={url}/>
-      })
+    //async stuff
+    if (!(data)) {
+      return <Loading />
     }
+    var firstImg = data.url.shift()
+    var imgList = data.url.map(function(url) {
+      return <PopoImg url={url}/>
+    })
 
     return (
       <div>
-        <div className="header-div">
-          <h1 className="header-title">{this.state.data.name}</h1>
-        </div>
+        <PopoViewHeader name={this.state.data.name}/>
         <div className="popo-container">
           <aside className="side-content">
             <div className="side-content-subdiv">
               <div className="content-img">
                 <img className="popo-img" src={firstImg}/>
               </div>
-              <Map />
+              <Map  lat={this.state.data.lat}
+                    long={this.state.data.long}
+              />
             </div>
           </aside>
           <div className="main-content">
