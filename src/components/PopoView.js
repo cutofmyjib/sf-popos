@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PopoViewHeader from './PopoView-Header';
-import PopoViewContent from './PopoView-Content';
+import PopoViewContainer from './PopoView-Container';
+import Loading from './Loading';
 import firebase from 'firebase';
 
 var config2 = {
@@ -36,18 +36,16 @@ export default class PopoView extends Component {
 
   render() {
     var data = this.state.data;
-
-    //async stuff
-    if (!(data)) {
-      return <Loading />
+    var status = this.state.status;
+    console.log(data)
+    //switch case to render depending on state.status
+    switch (status) {
+      case 'loading':
+        return <Loading />
+      case 'success':
+        return <PopoViewContainer data={this.state.data}/>
+      default:
+        return <div></div>
     }
-
-    return (
-      <div>
-        <PopoViewHeader name={this.state.data.name}
-                        location={this.state.data.location} />
-        <PopoViewContent data={this.state.data}/>
-      </div>
-    );
   }
 }
