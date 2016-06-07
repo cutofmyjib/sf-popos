@@ -32,8 +32,6 @@ export default class Map extends Component {
   }
 
   render() {
-    console.log('MAP')
-    console.log(this.props.lat, this.props.long)
     return (
       <div id="map"></div>
     );
