@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PopoViewContentMain from './PopoView-Content-Main';
 import PopoViewContentSide from './PopoView-Content-Side';
 import PopoImg from './PopoImg';
 
@@ -16,12 +17,8 @@ export default class PopoViewContent extends Component {
                                 sideImgHeader={sideImgHeader} />
         </aside>
         <div className="main-content">
-          <div className="main-content-subdiv">
-            <div className="main-content-description">
-              <p>{this.props.data.description}</p>
-            </div>
-            {imgList}
-          </div>
+          <PopoViewContentMain  description={this.props.data.description}
+                                imgList={imgList} />
         </div>
       </div>
     )
