@@ -10,6 +10,9 @@ export default class Map extends Component {
   }
 
   initMap() {
+    var customMapType = new google.maps.StyledMapType(this.props.style)
+    var customMapTypeId = 'custom_style';
+
     var myLatLng = {lat: this.props.lat, lng: this.props.long};
     // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -24,6 +27,9 @@ export default class Map extends Component {
       position: myLatLng,
       title: 'Hello World!'
     });
+
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
   }
 
   componentDidMount() {
