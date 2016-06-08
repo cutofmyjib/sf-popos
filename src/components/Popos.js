@@ -2,14 +2,8 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Popo from './Popo';
 import firebase from 'firebase';
+import { config } from './config';
 
-var config = {
-    apiKey: "AIzaSyDj7DG7DU8QGYE7KUwYkeukOIbUrWOniFE",
-    authDomain: "sf-popos.firebaseapp.com",
-    databaseURL: "https://sf-popos.firebaseio.com",
-    storageBucket: "",
-    serviceAccount: "sf-popos-90d2b81d7ffa.json"
-  };
 firebase.initializeApp(config);
 
 export default class Popos extends Component {
@@ -35,8 +29,11 @@ export default class Popos extends Component {
   }
 
   render() {
-    var list = this.state.photos.map(function(popo, index) {
-      return <Popo key={index} id={index} {...popo}/>
+    var list = this.state.photos.map(function(props, index) {
+      return <Popo  key={index}
+                    id={index}
+                    headerImg={props.url[0]}
+                    {...props}/>
     });
 
     return (

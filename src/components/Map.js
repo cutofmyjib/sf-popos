@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Loading from './Loading';
 
 export default class Map extends Component {
   constructor(props) {

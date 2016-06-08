@@ -4,6 +4,14 @@ body {
   background: HoneyDew;
 }
 
+header {
+  border: 2px solid SlateBlue;
+  color: SlateBlue;
+  border-bottom: 0;
+  padding: 50px 150px 30px 150px;
+  text-align: center;
+}
+
 .popo-container {
   border: 2px solid SlateBlue;
   display: flex;
@@ -12,14 +20,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin: 0;
-}
-
-.header-div {
-  border: 2px solid SlateBlue;
-  color: SlateBlue;
-  border-bottom: 0;
-  padding: 50px 150px 30px 150px;
-  text-align: center;
 }
 
 .header-title {
