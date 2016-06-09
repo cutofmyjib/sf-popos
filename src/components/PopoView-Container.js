@@ -4,7 +4,6 @@ import PopoViewContent from './PopoView-Content';
 
 export default class PopoViewContainer extends Component {
   render() {
-    console.log(this.props)
     return (
       <div>
         <PopoViewHeader name={this.props.data.name}
