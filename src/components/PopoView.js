@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import PopoViewContainer from './PopoView-Container';
 import Loading from './Loading';
 import firebase from 'firebase';
+import { config } from './config';
 
-var config2 = {
-    apiKey: "AIzaSyDj7DG7DU8QGYE7KUwYkeukOIbUrWOniFE",
-    authDomain: "sf-popos.firebaseapp.com",
-    databaseURL: "https://sf-popos.firebaseio.com",
-    storageBucket: "",
-    serviceAccount: "sf-popos-90d2b81d7ffa.json"
-  };
-firebase.initializeApp(config2, 'secondary');
+firebase.initializeApp(config, 'secondary');
 
 export default class PopoView extends Component {
   constructor(props) {
