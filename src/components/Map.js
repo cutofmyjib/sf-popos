@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 export default class Map extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      status: "loading"
-    };
-  }
 
   initMap() {
     var customMapType = new google.maps.StyledMapType(this.props.style)
@@ -33,7 +27,6 @@ export default class Map extends Component {
 
   componentDidMount() {
     this.initMap()
-    this.setState({ status: "success" })
   }
 
   render() {
