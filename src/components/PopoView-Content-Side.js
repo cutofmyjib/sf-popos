@@ -3,10 +3,8 @@ import Loading from './Loading';
 import Map from './Map';
 import {customMapStyle} from './customMapStyle';
 
-// var customStyle = require('customMapStyle')
 export default class PopoViewContentSide extends Component {
   render() {
-
     return (
       <div className="side-content-subdiv">
         <div className="content-img">
