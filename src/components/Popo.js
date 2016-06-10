@@ -9,7 +9,9 @@ export default class Popo extends Component {
     }
     return (
       <li className="popo">
-        <Link to={`popos/${this.props.id}`}><img className="popo-img" src={this.props.headerImg} /></Link>
+        <Link to={`popos/${this.props.id}`}>
+          <img className="popo-img" src={this.props.headerImg} />
+        </Link>
         <div className="popo-subcontainer">
           <h2><Link to={`popos/${this.props.id}`}>{this.props.name}</Link></h2>
           <div className="popo-detail-div">
