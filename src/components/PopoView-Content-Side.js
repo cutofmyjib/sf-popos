@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Loading from './Loading';
 import Map from './Map';
-import {customMapStyle} from './customMapStyle';
+import { customMapStyle } from './customMapStyle';
 
 export default class PopoViewContentSide extends Component {
   render() {
