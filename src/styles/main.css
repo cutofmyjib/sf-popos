@@ -161,3 +161,25 @@ header {
 .map-subcontainer {
   padding: 30px;
 }
+
+/*---------------------------------------------------------
+          Footer
+---------------------------------------------------------*/
+footer {
+  border: 2px solid SlateBlue;
+  border-top: 0;
+  color: SlateBlue;
+  padding: 50px;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a:hover {
+  color: LightSeaGreen
+}
+
+footer a {
+  color: SlateBlue;
+  text-decoration: none;
+}
+
