@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default class Popo extends Component {
   render() {
-    var snippet = this.props.snippet
+    var snippet = this.props.description
     if(snippet) {
       snippet = snippet.slice(0, 50) + '...'
     }
