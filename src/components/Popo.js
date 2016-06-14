@@ -22,7 +22,7 @@ export default class Popo extends Component {
             <i className="material-icons">schedule</i>
             <p>{this.props.hours}</p>
           </div>
-          <p>{snippet}</p>
+          <p className="description">{snippet}</p>
         </div>
       </li>
     );
