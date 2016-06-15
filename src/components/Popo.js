@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default class Popo extends Component {
   render() {
-    var snippet = this.props.snippet
+    var snippet = this.props.description
     if(snippet) {
       snippet = snippet.slice(0, 50) + '...'
     }
@@ -22,7 +22,7 @@ export default class Popo extends Component {
             <i className="material-icons">schedule</i>
             <p>{this.props.hours}</p>
           </div>
-          <p>{snippet}</p>
+          <p className="description">{snippet}</p>
         </div>
       </li>
     );
