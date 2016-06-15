@@ -7,7 +7,7 @@ export const customMapStyle = [
         "visibility": "on"
       },
       {
-        "color": "#726547"
+        "color": "#F05D23"
       },
       {
         "weight": "0.30"
@@ -19,7 +19,7 @@ export const customMapStyle = [
     "elementType": "labels.text.fill",
     "stylers": [
       {
-        "color": "#726547"
+        "color": "#F05D23"
       }
     ]
   },
@@ -28,7 +28,7 @@ export const customMapStyle = [
     "elementType": "labels.text.stroke",
     "stylers": [
       {
-        "color": "#9DCDC0"
+        "color": "#414233"
       },
       {
         "visibility": "on"
@@ -46,7 +46,7 @@ export const customMapStyle = [
         "visibility": "on"
       },
       {
-        "color": "#726547"
+        "color": "#F05D23"
       },
       {
         "weight": "1"
@@ -58,7 +58,7 @@ export const customMapStyle = [
     "elementType": "all",
     "stylers": [
       {
-        "color": "#9DCDC0"
+        "color": "#414233"
       }
     ]
   },
@@ -76,7 +76,7 @@ export const customMapStyle = [
     "elementType": "all",
     "stylers": [
       {
-        "color": "#726547"
+        "color": "#F05D23"
       },
       {
         "visibility": "simplified"
@@ -91,7 +91,7 @@ export const customMapStyle = [
         "visibility": "on"
       },
       {
-        "color": "#9DCDC0"
+        "color": "#414233"
       },
       {
         "weight": 8
@@ -106,7 +106,7 @@ export const customMapStyle = [
         "visibility": "on"
       },
       {
-        "color": "#726547"
+        "color": "#F05D23"
       },
       {
         "weight": 8
@@ -130,7 +130,7 @@ export const customMapStyle = [
         "visibility": "simplified"
       },
       {
-        "color": "#726547"
+        "color": "#F05D23"
       }
     ]
   },
@@ -142,7 +142,7 @@ export const customMapStyle = [
         "visibility": "on"
       },
       {
-        "color": "#726547"
+        "color": "#F05D23"
       }
     ]
   },
@@ -154,7 +154,7 @@ export const customMapStyle = [
         "visibility": "simplified"
       },
       {
-        "color": "#9DCDC0"
+        "color": "#414233"
       }
     ]
   },
