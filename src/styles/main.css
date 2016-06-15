@@ -87,6 +87,19 @@ header {
   align-items: center;
 }
 
+.material-icons {
+  padding-right: 10px;
+}
+
+.description {
+  font-family: 'Raleway', sans-serif;
+  color: #414233;
+  margin: 0;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+
 /*---------------------------------------------------------
           PopoView - Content
 ---------------------------------------------------------*/
@@ -126,14 +139,6 @@ header {
   border: 2px solid #414233;
   background: #E4E6C3;
   box-sizing: border-box;
-}
-
-.description {
-  font-family: 'Raleway', sans-serif;
-  color: #414233;
-  margin: 0;
-  line-height: 1.5em;
-  letter-spacing: 1px;
 }
 
 .map-container {
@@ -177,12 +182,24 @@ footer a {
 }
 
 
-
 /*---------------------------------------------------------
           Responsive
 ---------------------------------------------------------*/
+@media screen and (max-width: 1050px) {
+  header {
+    padding: 50px 75px 20px 75px;
+  }
 
-@media screen and (min-width: 800px) and (max-width: 950px) {
+  .popo {
+    width: 29%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    padding: 50px 50px 20px 50px;
+  }
+
   .popo {
     width: 45%;
   }
@@ -220,5 +237,25 @@ footer a {
     height: 100%;
     border: 2px solid #414233;
     margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  header {
+    padding: 40px 30px 10px 30px;
+  }
+
+  .header-title {
+    font-size: 48px;
+    margin: 25px 0 20px 0;
+  }
+
+  .header-sub {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .popo {
+    width: 100%;
   }
 }
