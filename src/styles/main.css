@@ -259,3 +259,49 @@ footer a {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 450px) {
+  body {
+    margin: 0;
+  }
+
+  header {
+    border: none;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  .popo-container,
+  footer {
+    border-left: none;
+    border-right: none;
+  }
+
+  .header-title {
+    font-size: 36px;
+    margin: 25px 0 20px 0;
+  }
+
+  .header-sub {
+    font-size: 12px;
+    letter-spacing: 5px;
+    padding: 12px;
+  }
+
+  .map-container {
+    flex-direction: column;
+  }
+
+  #map,
+  .map-subcontainer {
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+}
