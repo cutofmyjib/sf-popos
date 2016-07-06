@@ -242,7 +242,7 @@ footer a {
 
 @media screen and (max-width: 775px) {
   header {
-    padding: 40px 30px 10px 30px;
+    padding: 40px 30px;
   }
 
   .header-title {
@@ -267,10 +267,12 @@ footer a {
 
   header {
     border: none;
+    padding: 10px 20px;
   }
 
   header p {
     font-size: 14px;
+    margin: 0;
   }
 
   .popo-container,
@@ -281,13 +283,16 @@ footer a {
 
   .header-title {
     font-size: 36px;
-    margin: 25px 0 20px 0;
+    margin: 15px 0 10px 0;
+    letter-spacing: -1px;
   }
 
   .header-sub {
     font-size: 12px;
     letter-spacing: 5px;
     padding: 12px;
+    display: inline-block;
+    margin: 0 0 5px 0;
   }
 
   .map-container {
