@@ -99,6 +99,12 @@ header {
   letter-spacing: 1px;
 }
 
+.status-div {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 2px;
+}
 
 /*---------------------------------------------------------
           PopoView - Content
