@@ -31,7 +31,6 @@ export default class PopoView extends Component {
   render() {
     var data = this.state.data;
     var status = this.state.status;
-    console.log(data)
     //switch case to render depending on state.status
     switch (status) {
       case 'loading':

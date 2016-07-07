@@ -17,7 +17,6 @@ export default class Loading extends Component {
 
   componentDidMount() {
     this.animate()
-    console.log(this.state.loadingState)
   }
 
   componentWillUnmount() {
