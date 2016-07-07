@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loading from './loading';
 import Header from './Header';
 import Popo from './Popo';
 import firebase from 'firebase';
@@ -10,6 +11,7 @@ export default class Popos extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      status: 'loading',
       photos: []
     };
   }
@@ -19,7 +21,7 @@ export default class Popos extends Component {
     //get the data and save it to photos in state
     //bind this to function
     firebase.database().ref().on('value', function(snapshot) {
-      this.setState({photos: snapshot.val()})
+      this.setState({photos: snapshot.val(), status: 'success'})
     }.bind(this));
   }
 
@@ -35,14 +37,21 @@ export default class Popos extends Component {
                     headerImg={props.url[0]}
                     {...props}/>
     });
-
-    return (
-      <div>
-        <Header/>
-        <ul className="popo-container">
-          {list}
-        </ul>
-      </div>
-    );
+    var status = this.state.status;
+    switch (status) {
+      case 'loading':
+        return <Loading />
+      case 'success':
+        return (
+          <div>
+            <Header/>
+            <ul className="popo-container">
+              {list}
+            </ul>
+          </div>
+        );
+      default:
+        return <div></div>
+    }
   }
 };
