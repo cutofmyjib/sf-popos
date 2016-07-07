@@ -5,13 +5,17 @@ export default class Loading extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadingState: ""
+      loadingState: "."
     };
   }
 
   animate() {
     this.ellipsis = setInterval(function() {
-      this.setState({loadingState: this.state.loadingState += "."})
+      if(this.state.loadingState.length >= 3) {
+        this.setState({loadingState: "."})
+      } else {
+        this.setState({loadingState: this.state.loadingState += "."})
+      }
     }.bind(this), 200)
   };
 
