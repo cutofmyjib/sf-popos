@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Loading from './loading';
+import Loading from './Loading';
 import Header from './Header';
 import Popo from './Popo';
 import firebase from 'firebase';
