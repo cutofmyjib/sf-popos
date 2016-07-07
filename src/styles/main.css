@@ -100,9 +100,13 @@ header {
 }
 
 .status-div {
+  border: 2px solid #414233;
+  color: #414233;
+  border-bottom: 0;
+  padding: 50px 100px 30px 100px;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 48px;
-  text-align: center;
   letter-spacing: 2px;
 }
 
@@ -133,12 +137,6 @@ header {
 .main-content-description {
   margin: 15px;
 }
-
-/*.main-content-subdiv > div,
-.side-content-subdiv > div {
-  margin: 15px;
-
-}*/
 
 .content-img {
   border: 2px solid #414233;
