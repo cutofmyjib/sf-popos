@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Loading from './Loading';
 import Map from './Map';
-import { customMapStyle } from './customMapStyle';
 
 export default class PopoViewContentSide extends Component {
   render() {
@@ -11,9 +9,9 @@ export default class PopoViewContentSide extends Component {
           <img className="popo-img" src={this.props.sideImgHeader}/>
         </div>
         <div className="map-container">
-          <Map  lat={this.props.data.lat}
-                long={this.props.data.long}
-                style={customMapStyle}
+          <Map
+            spaces={[this.props.data]}
+            label={`Map of ${this.props.data.name}`}
           />
           <div className="map-subcontainer">
             <div className="popo-detail-div">

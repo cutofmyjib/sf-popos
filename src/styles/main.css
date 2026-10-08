@@ -156,7 +156,7 @@ header {
   border: 2px solid #414233;
 }
 
-#map {
+.popos-map {
   display: block;
   min-width: 100%;
   height: 300px;
@@ -166,6 +166,46 @@ header {
 .map-subcontainer {
   padding: 30px;
   background: #E4E6C3;
+}
+
+.overview-map {
+  border: 2px solid #414233;
+  border-bottom: 0;
+  color: #414233;
+  background: #E4E6C3;
+}
+
+.overview-map-heading {
+  padding: 20px 30px;
+}
+
+.overview-map-heading h2 {
+  margin: 0 0 10px;
+}
+
+.overview-map-heading p {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.overview-map .popos-map {
+  height: 420px;
+  max-height: 65vh;
+  min-height: 280px;
+  border-bottom: 0;
+}
+
+.popos-map-marker {
+  box-sizing: border-box;
+  border: 3px solid #414233;
+  border-radius: 50%;
+  background: #F05D23;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.popos-map-marker:focus {
+  outline: 3px solid #414233;
+  outline-offset: 3px;
 }
 
 /*---------------------------------------------------------
@@ -228,7 +268,7 @@ footer a {
     border: 0;
   }
 
-  #map {
+  .map-container .popos-map {
     box-sizing: border-box;
     display: inline-block;
     min-width: 50%;
@@ -304,7 +344,7 @@ footer a {
     flex-direction: column;
   }
 
-  #map,
+  .map-container .popos-map,
   .map-subcontainer {
     width: 100%;
     margin: 0;
@@ -312,6 +352,15 @@ footer a {
 
   .description {
     font-size: 14px;
+  }
+
+  .overview-map {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .overview-map-heading {
+    padding: 20px;
   }
 
 }
