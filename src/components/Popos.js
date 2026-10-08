@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Loading from './Loading';
 import Header from './Header';
 import Popo from './Popo';
+import Map from './Map';
 import firebase from 'firebase';
 import { config } from './config';
 
@@ -44,6 +45,22 @@ export default class Popos extends Component {
       case 'success':
         return (
           <div>
+            <section className="overview-map" aria-labelledby="overview-map-title">
+              <div className="overview-map-heading">
+                <h2 id="overview-map-title">Explore San Francisco's POPOS</h2>
+                <p>Select a pin to see the space and open its details.</p>
+              </div>
+              <Map
+                spaces={this.state.photos.map((space, id) => ({
+                  id,
+                  name: space.name,
+                  location: space.location,
+                  lat: space.lat,
+                  long: space.long
+                }))}
+                label="Map of San Francisco privately owned public open spaces"
+              />
+            </section>
             <Header/>
             <ul className="popo-container">
               {list}
